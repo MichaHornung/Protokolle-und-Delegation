@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" userLabel="Start View Controller" customClass="ViewController" customModule="Protokolle_und_Delegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qTW-B2-ZiK">
+                                <rect key="frame" x="70" y="119" width="253" height="222"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pPJ-jg-lpZ">
+                                <rect key="frame" x="40" y="778" width="313" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KRK-Gc-8Pr"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Fisch wählen"/>
+                                <connections>
+                                    <action selector="fischButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nlb-83-obo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJF-lG-8Kf">
+                                <rect key="frame" x="82" y="399" width="205" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="schönste Fisch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-cx-9bZ">
+                                <rect key="frame" x="40" y="482" width="313" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcher ist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66J-1T-BNu">
+                                <rect key="frame" x="48" y="325" width="296" height="54"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yZG-cx-9bZ" firstAttribute="trailing" secondItem="pPJ-jg-lpZ" secondAttribute="trailing" id="5CN-ob-rm8"/>
+                            <constraint firstItem="66J-1T-BNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="BBp-re-Y0a"/>
+                            <constraint firstItem="pPJ-jg-lpZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GEI-jO-aHK"/>
+                            <constraint firstItem="qTW-B2-ZiK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="HKu-Dt-aK5"/>
+                            <constraint firstItem="qTW-B2-ZiK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="KMz-Ye-VQK"/>
+                            <constraint firstItem="dJF-lG-8Kf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RqZ-8v-Ixg"/>
+                            <constraint firstItem="66J-1T-BNu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="266" id="SkF-ob-LLu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dJF-lG-8Kf" secondAttribute="trailing" constant="106" id="YEd-Pm-arI"/>
+                            <constraint firstItem="yZG-cx-9bZ" firstAttribute="leading" secondItem="pPJ-jg-lpZ" secondAttribute="leading" id="aOM-qZ-WQW"/>
+                            <constraint firstItem="dJF-lG-8Kf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="h5S-mj-Kpp"/>
+                            <constraint firstItem="66J-1T-BNu" firstAttribute="centerX" secondItem="yZG-cx-9bZ" secondAttribute="centerX" id="lBM-0t-KnL"/>
+                            <constraint firstItem="qTW-B2-ZiK" firstAttribute="centerX" secondItem="66J-1T-BNu" secondAttribute="centerX" id="lVr-V5-o0R"/>
+                            <constraint firstItem="66J-1T-BNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roc-gz-dIp"/>
+                            <constraint firstItem="yZG-cx-9bZ" firstAttribute="top" secondItem="dJF-lG-8Kf" secondAttribute="bottom" constant="29" id="y08-th-Hel"/>
+                            <constraint firstItem="dJF-lG-8Kf" firstAttribute="top" secondItem="qTW-B2-ZiK" secondAttribute="bottom" constant="58" id="zAn-o9-yOV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qTW-B2-ZiK" id="P7u-Op-Tjs"/>
+                        <outlet property="label" destination="66J-1T-BNu" id="xrh-Vv-VLq"/>
+                        <segue destination="6v8-i8-M9E" kind="show" identifier="startToFisch" id="1UW-9x-S49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="58.778625954198468" y="-34.507042253521128"/>
+        </scene>
+        <!--Fisch View Controller-->
+        <scene sceneID="w4a-tg-U0T">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="6v8-i8-M9E" userLabel="Fisch View Controller" customClass="_FischViewController" customModule="Protokolle_und_Delegation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hie-aF-ckg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qFq-AZ-a8h">
+                                <rect key="frame" x="76.666666666666686" y="191" width="240" height="470"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc7-ai-cCq">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="kqW-MQ-Dly"/>
+                                            <constraint firstAttribute="width" constant="240" id="xmy-DS-iG1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="karpfenklein"/>
+                                        <connections>
+                                            <action selector="karpfen" destination="6v8-i8-M9E" eventType="touchUpInside" id="lnb-RM-6Ch"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z44-7C-PVu">
+                                        <rect key="frame" x="0.0" y="170" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="Apd-L3-m74"/>
+                                            <constraint firstAttribute="width" constant="240" id="Jwz-kK-LVc"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="zanderklein"/>
+                                        <connections>
+                                            <action selector="stoer" destination="6v8-i8-M9E" eventType="touchUpInside" id="9AB-2l-np5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blr-hq-bCx">
+                                        <rect key="frame" x="0.0" y="340" width="240" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Jjy-ga-Zyq"/>
+                                            <constraint firstAttribute="height" constant="130" id="Jmw-lq-V4X"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="stoerklein"/>
+                                        <connections>
+                                            <action selector="zander" destination="6v8-i8-M9E" eventType="touchUpInside" id="NXD-Pq-GMI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jvi-c1-wqg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qFq-AZ-a8h" firstAttribute="centerX" secondItem="Hie-aF-ckg" secondAttribute="centerX" id="Rh9-22-khe"/>
+                            <constraint firstItem="qFq-AZ-a8h" firstAttribute="centerY" secondItem="Hie-aF-ckg" secondAttribute="centerY" id="pEZ-Gh-3mY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Do-I5-Eac"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVV-8B-Okr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858.77862595419845" y="-35.211267605633807"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="karpfenklein" width="100" height="69"/>
+        <image name="stoerklein" width="100" height="69"/>
+        <image name="zanderklein" width="100" height="69"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
